@@ -1,0 +1,136 @@
+﻿body {
+}
+
+.Inlineform-contorl{  
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;   
+}
+.HeaderHide {
+    display: none;
+}
+
+.Headerstyle {
+    color: #ffffff;
+    text-align: left;
+    vertical-align: top;
+    background-color: #0271dd;
+    /*background: linear-gradient(to bottom, #8f9194 0%,#5b5b5b 100%);*/
+}
+
+.gridalterrow {
+    background-color: White;
+     word-break: break-all;
+}
+
+.pagerstyle {
+    /*background: linear-gradient(to bottom, #8f9194 0%,#5b5b5b 100%);*/
+    background-color: #5b5b5b;
+}
+
+.Rowstyle {
+    color: #000000;
+    /*font-size: 14px;*/
+    text-align: left;
+    background-color: #d5d7e0;
+}
+
+.alternateRow {
+    color: #000000;
+    text-align: center;
+    background-color: #ebecf0;
+}
+
+.gridfooter {
+    color: #409cd2;    
+    /* height: 0px;*/
+}
+
+.gridpager {
+    /*  background: url(../images/center_menu.png) repeat-x;*/
+    text-align: left;
+    color: white;
+    /*border-left: solid 1px #409cd2;*/
+    background-color: #0A6AA7;
+}
+
+
+.gridrow {
+    /*background-color: #eff3fb;*/
+    /*background-color: #f1fbf0;*/
+    background-color: #EEEEEE;
+    word-break: break-all;
+}
+
+
+.gridselectedrow {
+    background-color: #5bc0e1;
+    color: black;
+}
+
+.modalBackground {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+
+
+
+.unbold_checkbox,label{
+            display: inline-block;
+max-width: 100%;
+margin-bottom: 5px;
+font-weight: 400;
+        }
+.rbl input[type="radio"]
+{
+   margin-left: 10px;
+   margin-right: 1px;
+}
+.chk input[type="checkbox"]
+{
+   margin-left: 10px;
+   margin-right: 1px;
+}
+
+
+.Currency-group
+{
+position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.Currency-group-addon
+{
+padding: 0px 3px;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1;
+    color: black;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.Currency-group-addon, .Currency-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+
+.Currency-group .form-control, .Currency-group-addon, .Currency-group-btn
+{
+    display: table-cell;
+}

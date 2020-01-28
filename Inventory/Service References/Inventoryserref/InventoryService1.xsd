@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Inventroy.Service.BAL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Inventroy.Service.BAL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50954/InventoryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Inventroy.Service" />
+  <xs:complexType name="BALItemMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStrActive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemCategory" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemMapID" type="xs:long" />
+      <xs:element minOccurs="0" name="ListItemCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedIN" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorItemID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALItemMap" nillable="true" type="tns:BALItemMap" />
+  <xs:complexType name="BALUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApproveRangeFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ApproveRangeTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Approveorder" type="xs:int" />
+      <xs:element minOccurs="0" name="BudgetCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BudgetValue" type="xs:long" />
+      <xs:element minOccurs="0" name="ConfirmPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DeletedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsApprove" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeny" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEmailNotification" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOrder" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsView" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastLoginDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListRoleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuID" type="xs:long" />
+      <xs:element minOccurs="0" name="MultipleRoles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageMasterPermissionMultiRoleID" type="xs:long" />
+      <xs:element minOccurs="0" name="PageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermissionID" type="xs:long" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegionID" type="xs:long" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleUserID" type="xs:long" />
+      <xs:element minOccurs="0" name="SubMenuId" type="xs:long" />
+      <xs:element minOccurs="0" name="UserID" type="xs:long" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRole" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRoleID" type="xs:long" />
+      <xs:element minOccurs="0" name="Xtn" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALUser" nillable="true" type="tns:BALUser" />
+  <xs:complexType name="BALCorporate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiededBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiededOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="Mode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchCorporate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALCorporate" nillable="true" type="tns:BALCorporate" />
+  <xs:complexType name="BALCapitalReceiving">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Audittrial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BalenceQty" type="xs:int" />
+      <xs:element minOccurs="0" name="CPONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CPRO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapitalItemMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="CapitalOrderID" type="xs:long" />
+      <xs:element minOccurs="0" name="CapitalReceivingDetailsID" type="xs:long" />
+      <xs:element minOccurs="0" name="CapitalReceivingMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="ClosedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ClosedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="Cost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EquipementList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentSubCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INSERTRECORDID" type="xs:long" />
+      <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoicedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderQty" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PackingSlipNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartialBy" type="xs:long" />
+      <xs:element minOccurs="0" name="PartialOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PricePerQty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ReceivedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReceivedQty" type="xs:int" />
+      <xs:element minOccurs="0" name="ReceivingAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivingOrder" type="xs:long" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VoidBy" type="xs:long" />
+      <xs:element minOccurs="0" name="VoidOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALCapitalReceiving" nillable="true" type="tns:BALCapitalReceiving" />
+  <xs:complexType name="BALRequestITReceiving">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Audittrial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BalacedQty" type="xs:int" />
+      <xs:element minOccurs="0" name="ClosedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ClosedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EquimentSubCategory" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipmentList" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITNNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITReceivingDetailsID" type="xs:long" />
+      <xs:element minOccurs="0" name="ITReceivingMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="InsertRecordID" type="xs:long" />
+      <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoicedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderQty" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PackingSlipNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartialBy" type="xs:long" />
+      <xs:element minOccurs="0" name="PartialOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PricePerQty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReceivedQty" type="xs:int" />
+      <xs:element minOccurs="0" name="Receivingaction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestITMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="RequestITOrderID" type="xs:long" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shippingcost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoidBy" type="xs:long" />
+      <xs:element minOccurs="0" name="VoidOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALRequestITReceiving" nillable="true" type="tns:BALRequestITReceiving" />
+  <xs:complexType name="BALMachinePartsReceiveOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BalanceQty" type="xs:int" />
+      <xs:element minOccurs="0" name="ClosedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ClosedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INSERTRECORDID" type="xs:long" />
+      <xs:element minOccurs="0" name="InvenValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoicedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Inventroy.Service" minOccurs="0" name="MPDetailsList" nillable="true" type="q1:ArrayOfGetMPRDetailsbyMPRMasterID" />
+      <xs:element minOccurs="0" name="MPONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MPRMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="MPRONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MachinePartsReceiveDetailsID" type="xs:long" />
+      <xs:element minOccurs="0" name="MachinePartsReceiveMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="MachinePartsRequestOrderID" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderQty" type="xs:int" />
+      <xs:element minOccurs="0" name="Others" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PackingSlipDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PackingSlipNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartialBy" type="xs:long" />
+      <xs:element minOccurs="0" name="PartialOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReceivedQty" type="xs:int" />
+      <xs:element minOccurs="0" name="ReceivingAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Updatekeyvalue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VoidBy" type="xs:long" />
+      <xs:element minOccurs="0" name="VoidOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALMachinePartsReceiveOrder" nillable="true" type="tns:BALMachinePartsReceiveOrder" />
+  <xs:complexType name="BALMedicalSupplyReceivingOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BalanceQty" type="xs:int" />
+      <xs:element minOccurs="0" name="ClosedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ClosedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INSERTRECORDID" type="xs:long" />
+      <xs:element minOccurs="0" name="InvenValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoicedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LockTimeOut" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="MedicalSuppliesReceivingDetailsID" type="xs:long" />
+      <xs:element minOccurs="0" name="MedicalSuppliesReceivingMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="MedicalSuppliesRequestDetailsID" type="xs:long" />
+      <xs:element minOccurs="0" name="MedicalSuppliesRequestOrderID" type="xs:long" />
+      <xs:element minOccurs="0" name="MedicalSupplyMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderQty" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="PRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PackingSlipDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PackingSlipNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartialBy" type="xs:long" />
+      <xs:element minOccurs="0" name="PartialOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReceivedQty" type="xs:int" />
+      <xs:element minOccurs="0" name="ReceivingAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchFilters" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tax" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Updatekeyvalue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoidBy" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALMedicalSupplyReceivingOrder" nillable="true" type="tns:BALMedicalSupplyReceivingOrder" />
+  <xs:complexType name="BALVendorOrderDue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DaytoToNotify" type="xs:long" />
+      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryWindow" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifitedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifitedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedInBy" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderDueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderType" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderTypestr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorOrderdueID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALVendorOrderDue" nillable="true" type="tns:BALVendorOrderDue" />
+  <xs:complexType name="BALReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemCategoryID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifitedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifitedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoggedInBy" type="xs:long" />
+      <xs:element minOccurs="0" name="MonthYear" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALReport" nillable="true" type="tns:BALReport" />
+  <xs:complexType name="BALActivityTracking">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppFeature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateLoggedIn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateLoggedOut" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DurationMinutes" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainMenuID" type="xs:long" />
+      <xs:element minOccurs="0" name="SubMenuID" type="xs:long" />
+      <xs:element minOccurs="0" name="TimeIn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeOut" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALActivityTracking" nillable="true" type="tns:BALActivityTracking" />
+  <xs:complexType name="BALServiceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApproveDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipementSubCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementSubCategorydesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipmentListID" type="xs:long" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReceive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationOfTheFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OtherRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PORemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SNo" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Inventroy.Service" minOccurs="0" name="SRDetailsList" nillable="true" type="q2:ArrayOfGetServiceRequestetailsbyServiceRequestMasterID" />
+      <xs:element minOccurs="0" name="SRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceCatDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="ServiceList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceListDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceListID" type="xs:long" />
+      <xs:element minOccurs="0" name="ServiceRequestDetailID" type="xs:long" />
+      <xs:element minOccurs="0" name="ServiceRequestMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="ServiceType" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServiceUploadID" type="xs:long" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:long" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UploadedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="UploadedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VendorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALServiceRequest" nillable="true" type="tns:BALServiceRequest" />
+  <xs:complexType name="BALEndingInventory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeggingInven" type="xs:long" />
+      <xs:element minOccurs="0" name="CategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndingInven" type="xs:long" />
+      <xs:element minOccurs="0" name="EndingInvenID" type="xs:long" />
+      <xs:element minOccurs="0" name="ExpiredMeds" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilitySupplyID" type="xs:long" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsNewFacility" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNewRecord" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ListCategoryID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="MonthYear" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MonthlyUsage" type="xs:long" />
+      <xs:element minOccurs="0" name="Noofvisit" type="xs:long" />
+      <xs:element minOccurs="0" name="QtyPack" type="xs:long" />
+      <xs:element minOccurs="0" name="ReceiveDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReceiveingInven" type="xs:long" />
+      <xs:element minOccurs="0" name="TransferINDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransferIn" type="xs:long" />
+      <xs:element minOccurs="0" name="TransferOut" type="xs:long" />
+      <xs:element minOccurs="0" name="TransferOutDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UOM" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALEndingInventory" nillable="true" type="tns:BALEndingInventory" />
+  <xs:complexType name="BALTransferOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateIDFrom" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateIDTo" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityIDFrom" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityIDTo" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilitySupplyID" type="xs:long" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemCategory" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ListCategoryID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListTransferFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListTransferTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QtyPack" type="xs:long" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransferID" type="xs:long" />
+      <xs:element minOccurs="0" name="TransferNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransferOut" type="xs:long" />
+      <xs:element minOccurs="0" name="TransferQty" type="xs:long" />
+      <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UOMID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALTransferOut" nillable="true" type="tns:BALTransferOut" />
+  <xs:complexType name="BALTransferIn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateFromName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateIDTo" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateIDfrom" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateToName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityFromName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityIDFrom" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityIDTo" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityToName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvenValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ListCategoryID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockTimeOut" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QtyPack" type="xs:long" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransferINID" type="xs:long" />
+      <xs:element minOccurs="0" name="TransferInDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransferNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransferOutDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransferOutID" type="xs:long" />
+      <xs:element minOccurs="0" name="Transferqty" type="xs:long" />
+      <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UOMID" type="xs:long" />
+      <xs:element minOccurs="0" name="Updatekeyvalue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALTransferIn" nillable="true" type="tns:BALTransferIn" />
+  <xs:complexType name="BALMedicalSuppliesRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CombineKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvenValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Itemcatgroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Itemdescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Inventroy.Service" minOccurs="0" name="MSDetailsList" nillable="true" type="q3:ArrayOfBindMedicalsupplyDetail" />
+      <xs:element minOccurs="0" name="MedicalSupplyDetailID" type="xs:long" />
+      <xs:element minOccurs="0" name="MedicalSupplyMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderPeriod" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderType" type="xs:int" />
+      <xs:element minOccurs="0" name="PRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parlevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QuantityPack" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityinHand" type="xs:int" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SNGItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="Shipping" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeDelivery" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UOM" type="xs:long" />
+      <xs:element minOccurs="0" name="Updatekeyvalue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loggedinBy" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALMedicalSuppliesRequest" nillable="true" type="tns:BALMedicalSuppliesRequest" />
+  <xs:complexType name="BALFacility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdminEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdminPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdminPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillAddress1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillAddress2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillFax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillState" type="xs:long" />
+      <xs:element minOccurs="0" name="BillXtn" type="xs:long" />
+      <xs:element minOccurs="0" name="BillZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CopyFacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EMRCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeCensus" type="xs:long" />
+      <xs:element minOccurs="0" name="FCorporate" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GPAccountCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiededBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiededOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LogginBy" type="xs:long" />
+      <xs:element minOccurs="0" name="PatientCensus" type="xs:long" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" type="xs:long" />
+      <xs:element minOccurs="0" name="TechEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TechPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TechPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TxWeek" type="xs:long" />
+      <xs:element minOccurs="0" name="Xtn" type="xs:long" />
+      <xs:element minOccurs="0" name="Zipcode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALFacility" nillable="true" type="tns:BALFacility" />
+  <xs:complexType name="BALFacilityVendorAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityVendorAccID" type="xs:long" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStrActive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedIN" type="xs:long" />
+      <xs:element minOccurs="0" name="ShipAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALFacilityVendorAccount" nillable="true" type="tns:BALFacilityVendorAccount" />
+  <xs:complexType name="BALVendor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="All" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AlternateEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuildingMaintenance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStrActive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="MachineParts" type="xs:boolean" />
+      <xs:element minOccurs="0" name="POEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegularSupplies" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SearchItem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceOrder" type="xs:boolean" />
+      <xs:element minOccurs="0" name="State" type="xs:long" />
+      <xs:element minOccurs="0" name="UpdatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorUIID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Xtn" type="xs:long" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALVendor" nillable="true" type="tns:BALVendor" />
+  <xs:complexType name="BALPGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStrActive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="SearchItem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALPGroup" nillable="true" type="tns:BALPGroup" />
+  <xs:complexType name="BALUom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsActivestr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="UomID" type="xs:long" />
+      <xs:element minOccurs="0" name="UomName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALUom" nillable="true" type="tns:BALUom" />
+  <xs:complexType name="BALItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategorylistID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CurrencyID" type="xs:long" />
+      <xs:element minOccurs="0" name="CurrencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EachPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GPBillingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStrActive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="NDC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NonStandard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QtyPack" type="xs:long" />
+      <xs:element minOccurs="0" name="Standard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UOM" type="xs:long" />
+      <xs:element minOccurs="0" name="UnitPriceCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitPriceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UomName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALItem" nillable="true" type="tns:BALItem" />
+  <xs:complexType name="BALMachinemaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementCategorydesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipementListID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementListdesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipementSubCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementSubCategorydesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GpAccountCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hoursonthemachine" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IstrActive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="MachineID" type="xs:long" />
+      <xs:element minOccurs="0" name="Manufacturedyear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Warranty" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALMachinemaster" nillable="true" type="tns:BALMachinemaster" />
+  <xs:complexType name="BALCapital">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="All" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ApprovedBy" type="xs:long" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Inventroy.Service" minOccurs="0" name="CRDetailsList" nillable="true" type="q4:ArrayOfGetCapitalItemDetails" />
+      <xs:element minOccurs="0" name="CRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapitalItemDetailsID" type="xs:long" />
+      <xs:element minOccurs="0" name="CapitalItemMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeniedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipementListID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipmentCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipmentSubCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentSubCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="New" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OrderQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="PricePerUnit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Replacement" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RequestType" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SINo" type="xs:int" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shipping" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingID" type="xs:long" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:long" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VendorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loggedinBy" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALCapital" nillable="true" type="tns:BALCapital" />
+  <xs:complexType name="BALMedicalSupplyRequestPo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvenValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="MedicalSupplyMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="PRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Updatekeyvalue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALMedicalSupplyRequestPo" nillable="true" type="tns:BALMedicalSupplyRequestPo" />
+  <xs:complexType name="BALRequestITPO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Audittrial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITNNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestITMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="RequestITOrderID" type="xs:long" />
+      <xs:element minOccurs="0" name="SortOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorIDs" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALRequestITPO" nillable="true" type="tns:BALRequestITPO" />
+  <xs:complexType name="BALMachinePartsOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="InvenValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="MPONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MPRMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="MPRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MachinePartsRequestOrderID" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Updatekeyvalue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALMachinePartsOrder" nillable="true" type="tns:BALMachinePartsOrder" />
+  <xs:complexType name="BALCapitalPO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Audittrial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CPONo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapitalItemMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="CapitalOrderID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ListCorporateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListFacilityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedinBy" type="xs:long" />
+      <xs:element minOccurs="0" name="OrderContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALCapitalPO" nillable="true" type="tns:BALCapitalPO" />
+  <xs:complexType name="BALMPRMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EquipementList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipementListID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementSubCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipementSubCategorydesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hoursonthemachine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Inventroy.Service" minOccurs="0" name="MPDetailsList" nillable="true" type="q5:ArrayOfGetMPRDetailsbyMPRMasterID" />
+      <xs:element minOccurs="0" name="MPRDetailID" type="xs:long" />
+      <xs:element minOccurs="0" name="MPRMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="MPRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="PricePerUnit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shipping" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingID" type="xs:long" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:long" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loggedinBy" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALMPRMaster" nillable="true" type="tns:BALMPRMaster" />
+  <xs:complexType name="BALRequestIT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Audittrial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EquipementList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipementListID" type="xs:long" />
+      <xs:element minOccurs="0" name="EquipmentCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Inventroy.Service" minOccurs="0" name="MPDetailsList" nillable="true" type="q6:ArrayOfGetMPRDetailsbyMPRMasterID" />
+      <xs:element minOccurs="0" name="PricePerQty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Qty" type="xs:int" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestITDetailID" type="xs:long" />
+      <xs:element minOccurs="0" name="RequestITMasterID" type="xs:long" />
+      <xs:element minOccurs="0" name="RequestType" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SINo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shipping" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingID" type="xs:long" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loggedinBy" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALRequestIT" nillable="true" type="tns:BALRequestIT" />
+  <xs:complexType name="ArrayOfBALUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BALUser" nillable="true" type="tns:BALUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBALUser" nillable="true" type="tns:ArrayOfBALUser" />
+  <xs:complexType name="BALGPBill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GPBillingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GPBillingID" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALGPBill" nillable="true" type="tns:BALGPBill" />
+  <xs:complexType name="BALFaItemMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityItemMapID" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALFaItemMap" nillable="true" type="tns:BALFaItemMap" />
+  <xs:complexType name="BALFacilitySupply">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BundleUpdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Census" type="xs:long" />
+      <xs:element minOccurs="0" name="CorporateID" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilityID" type="xs:long" />
+      <xs:element minOccurs="0" name="FacilitySupplyID" type="xs:long" />
+      <xs:element minOccurs="0" name="Factor" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEmp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPatient" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Isboth" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Isothers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemCategory" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:long" />
+      <xs:element minOccurs="0" name="LastModifiedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="ListItemCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parlevel" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:long" />
+      <xs:element minOccurs="0" name="VendorOrderDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BALFacilitySupply" nillable="true" type="tns:BALFacilitySupply" />
+</xs:schema>

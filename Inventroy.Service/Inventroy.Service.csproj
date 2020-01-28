@@ -1,0 +1,1069 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C155ECFF-3258-42CC-96C9-99C86CF83D71}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventroy.Service</RootNamespace>
+    <AssemblyName>Inventroy.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44381</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Inventory.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Inventory.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Inventory.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Inventory.edmx</DependentUpon>
+      <LastGenOutput>Inventory.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Inventory.edmx.diagram">
+      <DependentUpon>Inventory.edmx</DependentUpon>
+    </Content>
+    <Content Include="Inventory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Inventory.edmx</DependentUpon>
+      <LastGenOutput>Inventory.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\InventoryService.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InventoryService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMedicalsupplyitem.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BAL\BALActivityTracking.cs" />
+    <Compile Include="BAL\BALCapital.cs" />
+    <Compile Include="BAL\BALCapitalPO.cs" />
+    <Compile Include="BAL\BALCapitalReceiving.cs" />
+    <Compile Include="BAL\BALCorporate.cs" />
+    <Compile Include="BAL\BALTransferIn.cs" />
+    <Compile Include="BAL\BALTransferOut.cs" />
+    <Compile Include="BAL\BALEndingInventory.cs" />
+    <Compile Include="BAL\BALFacility.cs" />
+    <Compile Include="BAL\BALFacilitySupply.cs" />
+    <Compile Include="BAL\BALFacilityVendorAccount.cs" />
+    <Compile Include="BAL\BALFaItemMap.cs" />
+    <Compile Include="BAL\BALGPBill.cs" />
+    <Compile Include="BAL\BALItem.cs" />
+    <Compile Include="BAL\BALItemMap.cs" />
+    <Compile Include="BAL\BALMachinemaster.cs" />
+    <Compile Include="BAL\BALMachinePartsOrder.cs" />
+    <Compile Include="BAL\BALMachinePartsReceiveOrder.cs" />
+    <Compile Include="BAL\BALMedicalSuppliesRequest.cs" />
+    <Compile Include="BAL\BALMedicalSupplyReceivingOrder.cs" />
+    <Compile Include="BAL\BALMedicalSupplyRequestPo.cs" />
+    <Compile Include="BAL\BALMPRMaster.cs" />
+    <Compile Include="BAL\BALPGroup.cs" />
+    <Compile Include="BAL\BALProduct.cs" />
+    <Compile Include="BAL\BALRequestIT.cs" />
+    <Compile Include="BAL\BALRequestITPO.cs" />
+    <Compile Include="BAL\BALRequestITReceiving.cs" />
+    <Compile Include="BAL\BALServiceRequest.cs" />
+    <Compile Include="BAL\BALUom.cs" />
+    <Compile Include="BAL\BALUser.cs" />
+    <Compile Include="BAL\BALVendor.cs" />
+    <Compile Include="BAL\BALReport.cs" />
+    <Compile Include="BAL\BALVendorOrderDue.cs" />
+    <Compile Include="BindCapitalDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindCapitalItemRequestReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindCapitalReceivingDetailsSubReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindCapitalReceivingsummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindCorporateMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindCorporateMasterReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindEquipement.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindEquipementListFORIT.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindEquipementsubcategoryFORIT.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindEquipementSubCategoryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindExistuser.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindFacilityDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindFacilityReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindFacilityVendorAccountReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindItem.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindITNNOvalues.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindITReceivingDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindITReceivingDetailsSubReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindITReceivingsummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindITRequestPOReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMachinePartReceivingDetailsSubReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMachinePartsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMachinePOReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMachineReceiveSummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMachineReceivingDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMedicalsupplyDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMedicalSupplyDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMedicalSupplyDetailsSubReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMedicalsupplymaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMedicalsupplymasterandDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMedicalsupplyReceivingDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindMultiRolesPermission.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindPermission.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindPermissionforUser.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindProduct.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindReceivingDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindRequestITDetailsfromPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindRequestITPartsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindRolesForFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindSearchFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindSearchItem.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindServiceRequestReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindTransferInReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindTransferOutHistoryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindTransferOutReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindUserRole.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindUserSummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindVendorItemMapReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BindVendorOrderDue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalItemApprove.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalItemOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalItemRequestDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalItemRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckEquipmentlist.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckServicelist.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckVendorOrderDue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chkvalidcorporate.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertList\ConvertDstoList.cs" />
+    <Compile Include="CorporateMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBClass\DataSourceCommunicator.cs" />
+    <Compile Include="ddlCurrency.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ddlLoadValues.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ddlUOM.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EndingInventoryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EquipementCategoryMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EquipementListMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EquipementListMaster_TEMP.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EquipementSubCategoryMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Facility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacilityItemMap.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacilitySupply.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacilityVendorAccount.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindDuplicateShippingValue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FindDuplicateTimeDeliveryValue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetActiveEquipementListvalue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetActiveEquipementSubCategoryvalue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetActiveServiceListvalue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCapitalItemDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCapitalItemMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCapitalOrderCPONo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCapitalPOReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCatagoryByFacilityID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCategoryByListFacilityID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCategoryByListVendorID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCategoryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCorporate.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCorporateFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCorporateFacilityByUserID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCpoDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCPROMasterReview.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCROrderContentPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetDrpItemsByCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetdrpMainMenu.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetdrpSubMenu.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmailNotificationforTransfer.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEquipementList.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEquipementListforCapital.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEquipementSubCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEquipmentCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEquipmentSubCategoryforCapital.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacilityByListCorporateID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacilityItemMap.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacilityShortName.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacilitySuppliesMapReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacilitySupply.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacilitySupplyGird.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFacilityVendorAccount.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFromEmailforTransfer.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetGPBilling.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItem.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemDescName.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemDRD.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemMap.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemMapping.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemsbyFacilityID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetItemSummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetITRequestDetailsbyMasterID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GETITRequestPODetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Getitronovalue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetITROrderContentPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetList.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetLoginDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetLoginFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetLookUpList.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMachineMasterbasedMachineID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMachinemasterDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMachineMasterDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMachineMasterReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMachinePartsOrderMPONo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMedicalRequestPODetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMedicalsuppliesItem.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMedicalSupplyPoReportDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMedicalsupplyReceivingSummary.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMedicalSupplyRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetmedicalsupplyReviewReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMonthlyUsageReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMPOrderContentPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GETMPOValues.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMPRDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMPRDetailsbyMPRMasterID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMPRMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMPRMasterOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GETMPROValues.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMSRequestByMasterID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMSRMultipleIDs.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMSROrderContentPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMSRReceivingsummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMultiUserApprove.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetNonsuperAdminMedicalSupplyMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetNonsuperAdminRequestITMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetOrderPeriod.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPermission.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProductGroups.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetReceivedQtyInfo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRegionMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRequestITMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRwdlsafterordergeneration.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSerialNo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceAttachment.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceList.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceReceiveOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceRequestActionByMasterID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceRequestetailsbyServiceRequestMasterID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceRequestPODetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceRequestPOGenerateDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceRequestPoReportDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceTempAttachment.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSROrderContentPOReports.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetState.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSuperAdminDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTransferInHistoryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTransferINQtyInfo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTransferNo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTransferOutQtyInfo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUom.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUOMName.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUomReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserApprovePermission.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserInformation.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserPagePermission.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserPermissionReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserRoleandFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserRoleForFacility.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendor.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorByFacilityID.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetvendorDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorDetailsReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorItemMappingPage.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorOrderDue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorOrderdueRemainderReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorOrderDueReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GETVendorUniqueName.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetZone.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GPBillingMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IInventoryService.cs" />
+    <Compile Include="InvenKeyValue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDictionary.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryService.svc.cs">
+      <DependentUpon>InventoryService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IsUserExist.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemMapping.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITReceivingMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITRequestApprove.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITRequestDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITRequestPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IUserRole.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogService\EventLogger.cs" />
+    <Compile Include="LogService\EventLoggerConfig.cs" />
+    <Compile Include="LogService\EventLoggerConstants.cs" />
+    <Compile Include="LogService\EventLoggerLoggingDetails.cs" />
+    <Compile Include="Machinemaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MachinePartsApprove.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MachinePartsRequestDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MachinePartsRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MachinePartsRequestOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalsuppliesRequestApprove.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalSuppliesRequestDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalSuppliesRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalSuppliesRequestOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Objects.cs" />
+    <Compile Include="PageMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PageMasterPermission.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SavedEquipmentCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SavedEquipmentList.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SavedEquipmentSubCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SavedServiceCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SavedServiceList.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SavedShippingValue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SavedTimeDeliveryValue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCapitalItemRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCapitalPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCapitalReceivingMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCapitalReceivingSummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCorporateMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEndingInventory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchFacilityVendorAcct.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchItemCategory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchITReceiving.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchITReceivingSummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchITRequest.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMachinemasterdetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMachinePartsReceive.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMachinePartsReceiveSummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMedicalSuppliesReceiving.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMedicalSuppliesReceivingSummaryReport.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMedicalSupplyRequest.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMedicalSupplyRequestPo.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMPRMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMPRMasterOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchRequestITPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchServiceRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchServiceRequestPO.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchServiceRequestPurchaseOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchServiceRequestPurchaseOrderDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchServiceRequestReceivingOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTransferIn.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTransferInHistory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTransferOut.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTransferOutHistory.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUserDetails.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchVendorItemMap.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchVendorOrderType.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCategoryMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceListMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRequestDetail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRequestMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UomMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCapitalRecevingMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateITRecevingMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMachinePartsReceivingMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMSRReceivingMaster.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserFacilityRole.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateMedicalSuppliesItem.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateMedicalSuppliesOrder.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateVendorOrderType.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidCapitalEquipment.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidFaciliityAccountCode.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Validgpbillcode.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidITEquipment.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidMachineEquipment.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Validuseremail.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VendorOrderDue.cs">
+      <DependentUpon>Inventory.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50954</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50954/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

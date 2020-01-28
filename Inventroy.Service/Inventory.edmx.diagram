@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6b61dbcdaf64cb9997864ce142079b8" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="InventoryModel.IUserRole" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="InventoryModel.InvenKeyValue" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="InventoryModel.InventoryDictionary" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="InventoryModel.UserFacilityRole" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="InventoryModel.ItemMapping" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="InventoryModel.UomMaster" Width="1.5" PointX="11.375" PointY="4.75" />
+        <EntityTypeShape EntityType="InventoryModel.PageMaster" Width="1.5" PointX="11.375" PointY="7.75" />
+        <EntityTypeShape EntityType="InventoryModel.Currency" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="InventoryModel.CorporateMaster" Width="1.5" PointX="5.375" PointY="12.75" />
+        <EntityTypeShape EntityType="InventoryModel.GPBillingMaster" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="InventoryModel.FacilityItemMap" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="InventoryModel.Facility" Width="1.5" PointX="8.375" PointY="4.75" />
+        <EntityTypeShape EntityType="InventoryModel.Vendor" Width="1.5" PointX="7.375" PointY="13.75" />
+        <EntityTypeShape EntityType="InventoryModel.VendorOrderDue" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="InventoryModel.FacilitySupply" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="InventoryModel.Machinemaster" Width="1.5" PointX="9.375" PointY="15.75" />
+        <AssociationConnector Association="InventoryModel.FK_Machinemaster_Facility" />
+        <AssociationConnector Association="InventoryModel.FK_InvenKeyValue_InventoryDictionary" />
+        <EntityTypeShape EntityType="InventoryModel.MachinePartsRequestDetail" Width="1.5" PointX="17.625" PointY="11.375" />
+        <EntityTypeShape EntityType="InventoryModel.MachinePartsRequestMaster" Width="1.5" PointX="15.375" PointY="11" />
+        <AssociationConnector Association="InventoryModel.FK_MachinePartsRequestDetails_MachinePartsRequestMaster" />
+        <AssociationConnector Association="InventoryModel.FK_Facility_CorporateMaster" />
+        <AssociationConnector Association="InventoryModel.FK_MachinePartsRequestMaster_CorporateMaster" />
+        <AssociationConnector Association="InventoryModel.FK_MachinePartsRequestMaster_Facility" />
+        <EntityTypeShape EntityType="InventoryModel.FacilityVendorAccount" Width="1.5" PointX="11.375" PointY="15.75" />
+        <EntityTypeShape EntityType="InventoryModel.ServiceCategoryMaster" Width="1.5" PointX="15.375" PointY="25.5" />
+        <EntityTypeShape EntityType="InventoryModel.ServiceListMaster" Width="1.5" PointX="15.375" PointY="21.625" />
+        <EntityTypeShape EntityType="InventoryModel.ServiceRequestMaster" Width="1.5" PointX="17.625" PointY="5.625" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestMaster_CorporateMaster" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestMaster_Facility" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceListMaster_ServiceCategoryMaster" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestMaster_ServiceCategoryMaster" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestMaster_ServiceListMaster" />
+        <EntityTypeShape EntityType="InventoryModel.EquipementCategoryMaster" Width="1.5" PointX="3.375" PointY="16.75" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestMaster_EquipementCategoryMaster" />
+        <EntityTypeShape EntityType="InventoryModel.MedicalSuppliesRequestMaster" Width="1.5" PointX="17.625" PointY="0.75" />
+        <AssociationConnector Association="InventoryModel.FK_MedicalSuppliesRequestMaster_Corporate" />
+        <AssociationConnector Association="InventoryModel.FK_MedicalSuppliesRequestMaster_CorporateMaster" />
+        <AssociationConnector Association="InventoryModel.FK_MedicalSuppliesRequestMaster_Facility" />
+        <AssociationConnector Association="InventoryModel.FK_MedicalSuppliesRequestMaster_FacilityMap" />
+        <EntityTypeShape EntityType="InventoryModel.MedicalSuppliesRequestDetail" Width="1.5" PointX="19.875" PointY="0.75" />
+        <AssociationConnector Association="InventoryModel.FK_MedicalSuppliesRequestDetail_MedicalSuppliesRequestMaster" />
+        <EntityTypeShape EntityType="InventoryModel.EquipementSubCategoryMaster" Width="1.5" PointX="0.75" PointY="19.75" />
+        <EntityTypeShape EntityType="InventoryModel.ITRequestDetail" Width="1.5" PointX="11.75" PointY="19.75" />
+        <EntityTypeShape EntityType="InventoryModel.ITRequestMaster" Width="1.5" PointX="19.75" PointY="16.75" />
+        <EntityTypeShape EntityType="InventoryModel.CapitalItemRequestDetail" Width="1.5" PointX="3.375" PointY="20.75" />
+        <EntityTypeShape EntityType="InventoryModel.CapitalItemRequestMaster" Width="1.5" PointX="5.375" PointY="20.75" />
+        <EntityTypeShape EntityType="InventoryModel.EquipementListMaster" Width="1.5" PointX="20.375" PointY="11" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestMaster_EquipementListMaster" />
+        <EntityTypeShape EntityType="InventoryModel.PageMasterPermission" Width="1.5" PointX="22.375" PointY="0.75" />
+        <EntityTypeShape EntityType="InventoryModel.MachinePartsRequestOrder" Width="1.5" PointX="10.375" PointY="10.75" />
+        <EntityTypeShape EntityType="InventoryModel.EquipementListMaster_TEMP" Width="1.5" PointX="10.375" PointY="10.75" />
+        <EntityTypeShape EntityType="InventoryModel.MedicalSuppliesRequestOrder" Width="1.5" PointX="22.375" PointY="11.75" />
+        <EntityTypeShape EntityType="InventoryModel.CapitalItemOrder" Width="1.5" PointX="22.375" PointY="6.75" />
+        <EntityTypeShape EntityType="InventoryModel.ITRequestApprove" Width="1.5" PointX="12.375" PointY="11.75" />
+        <EntityTypeShape EntityType="InventoryModel.CapitalItemApprove" Width="1.5" PointX="12.375" PointY="11.75" />
+        <EntityTypeShape EntityType="InventoryModel.ServiceRequestDetail" Width="1.5" PointX="19.875" PointY="22.875" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestDetails_ServiceRequestMaster" />
+        <EntityTypeShape EntityType="InventoryModel.MachinePartsApprove" Width="1.5" PointX="22.375" PointY="16.75" />
+        <EntityTypeShape EntityType="InventoryModel.ITRequestPO" Width="1.5" PointX="7.375" PointY="21.75" />
+        <EntityTypeShape EntityType="InventoryModel.MedicalsuppliesRequestApprove" Width="1.5" PointX="22.375" PointY="20.75" />
+        <EntityTypeShape EntityType="InventoryModel.User" Width="1.5" PointX="0.75" PointY="1" />
+        <AssociationConnector Association="InventoryModel.FK_ServiceRequestMaster_Users" />
+        <EntityTypeShape EntityType="InventoryModel.Item" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="InventoryModel.ItemCategory" Width="1.5" PointX="0.75" PointY="23.75" />
+        </Diagram>
+      <Diagram DiagramId="5aa1deb310b74e1b9205de6748c28ee0" Name="Diagram2" ZoomLevel="74" >
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DBServiceConfigSync"  targetNamespace="http://tempuri.org/DBServiceConfigSync.xsd" elementFormDefault="qualified"
+    xmlns="http://tempuri.org/DBServiceConfigSync.xsd" xmlns:mstns="http://tempuri.org/DBServiceConfigSync.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="DBServiceConfigConfig">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DBServer" type="xs:string" />
+				<xs:element name="DBName" type="xs:string" />
+				<xs:element name="DBUser" type="xs:string" />
+				<xs:element name="DBPassword" type="xs:string" />
+				<xs:element name="AdminEmailAddress" type="xs:string" />
+        <xs:element name="ErrEmailAddress" type="xs:string" />
+				<xs:element name="LastAccessed" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
